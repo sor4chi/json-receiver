@@ -1,0 +1,25 @@
+{
+  "name": "json-receiver",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && echo '#!/usr/bin/env node' | cat - dist/index.js > temp && mv temp dist/index.js && chmod +x dist/index.js",
+    "start": "node dist/index.js"
+  },
+  "bin": {
+    "json-receiver": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@hono/node-server": "^1.13.1",
+    "hono": "^4.6.3",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/yargs": "^17.0.33",
+    "typescript": "^5.6.2"
+  }
+}
